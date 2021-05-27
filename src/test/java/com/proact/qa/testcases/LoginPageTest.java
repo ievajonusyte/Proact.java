@@ -10,13 +10,13 @@ public class LoginPageTest extends BaseTest {
         super();}
 
     @Test
-    public static void isLogoDisplayed() {
+    public void isLogoDisplayed() {
         LoginPage login = new LoginPage(driver);
         Assert.assertEquals(true, login.isLogoDisplayed());
         System.out.println("Logo is displayed");}
 
     @Test
-    public static void login() throws FileNotFoundException, InterruptedException {
+    public void login() throws FileNotFoundException, InterruptedException {
         LoginPage logo = new LoginPage(driver);
         logo.enterEmail();
         logo.enterPassword();
@@ -25,7 +25,7 @@ public class LoginPageTest extends BaseTest {
         System.out.println("Login successful");}
 
     @Test
-    public static void logout() {
+    public void logout() {
         LoginPage logout = new LoginPage(driver);
         logout.pressLogOut();
         Assert.assertEquals(true, logout.isLogoDisplayed());
